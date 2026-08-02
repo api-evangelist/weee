@@ -1,9 +1,31 @@
 aid: weee
 name: Weee
-description: Weee is a company surfaced as a portfolio company of lightspeed-venture-partners, softbank-vision-fund
-  and added to the API Evangelist network as a stub for enrichment. This profile is a lead awaiting the
-  enrichment pipeline.
+description: >-
+  Weee! is America's largest online Asian grocery store and delivery platform,
+  operating as a direct-to-consumer online supermarket serving major
+  metropolitan areas across the United States. It curates and fulfills inventory
+  through regional distribution centers and cold-chain logistics, bringing
+  together products and ingredients commonly found in Chinese, Japanese, Korean,
+  Vietnamese, Thai, Filipino, and Indian supermarkets. The storefront spans fresh
+  produce, frozen meats, seafood, pantry staples, snacks, sauces, hot pot
+  ingredients, beverages, and household essentials, accepts EBT/SNAP in eligible
+  cities, and runs a multilingual experience (English, Chinese, Korean, Japanese,
+  Vietnamese, Thai). Weee is backed by Lightspeed Venture Partners and the SoftBank
+  Vision Fund. As of this profile Weee publishes no public developer API; this
+  record captures its public web identity and AI-indexing (llms.txt) surface.
 url: https://raw.githubusercontent.com/api-evangelist/weee/refs/heads/main/apis.yml
+accessModel:
+  pricing: unknown
+  onboarding: unknown
+  trial: false
+  try_now: false
+  public: false
+  label: Unknown
+  confidence: low
+  source: []
+  generated: '2026-07-22'
+  method: derived
+image: https://www.sayweee.com/favicons/apple-touch-icon.png
 x-type: company
 x-source: vc-portfolio
 x-backed-by:
@@ -13,12 +35,43 @@ x-tier: stub
 x-tier-reason: portfolio-lead
 specificationVersion: '0.20'
 created: '2026-07-17'
-modified: '2026-07-17'
+modified: '2026-07-21'
 tags:
 - Company
+- Grocery
+- E-Commerce
+- Food and Beverage
+- Delivery
+- Retail
+- Marketplace
+- Asian Groceries
 apis: []
+common:
+- type: DomainSecurity
+  url: security/weee-domain-security.yml
+- type: Website
+  url: https://www.sayweee.com/
+- type: Blog
+  url: https://blog.sayweee.com/
+- type: Support
+  url: https://www.sayweee.com/en/help
+- type: Login
+  url: https://www.sayweee.com/en/login
+- type: TermsOfService
+  url: https://www.sayweee.com/en/about/terms-of-service
+- type: PrivacyPolicy
+  url: https://www.sayweee.com/en/about/privacy-policy
+- type: LLMsTxt
+  url: llms/weee-llms.txt
+- type: WellKnown
+  url: well-known/weee-well-known.yml
 maintainers:
 - FN: Kin Lane
   email: kin@apievangelist.com
 - FN: APIs.json
   email: info@apis.io
+x-enrichment:
+  date: '2026-07-21'
+  status: enriched
+  artifacts_added: 5
+  pass: local-v1

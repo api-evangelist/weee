@@ -1,0 +1,25 @@
+generated: '2026-07-21'
+method: searched
+source: live probes of https://www.sayweee.com/.well-known/*
+host: https://www.sayweee.com
+documents:
+- path: /.well-known/assetlinks.json          # Android App Links (Digital Asset Links)
+  status: 200
+  file: weee-assetlinks.json
+- path: /.well-known/apple-app-site-association  # Apple Universal Links
+  status: 200
+  file: weee-apple-app-site-association.json
+- path: /.well-known/security.txt              # RFC 9116
+  status: 404
+- path: /.well-known/openid-configuration      # OIDC discovery
+  status: 404
+- path: /.well-known/oauth-authorization-server # RFC 8414
+  status: 404
+- path: /.well-known/api-catalog               # RFC 9727
+  status: 404
+- path: /.well-known/ai-plugin.json            # OpenAI plugin manifest
+  status: 404
+notes: >-
+  Only mobile app-association documents (Android assetlinks / Apple
+  app-site-association) are published. No API-discovery, OAuth/OIDC, or
+  security.txt documents are exposed. Weee has no public developer/API surface.

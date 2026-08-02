@@ -1,0 +1,9 @@
+[{
+  "relation": ["delegate_permission/common.handle_all_urls"],
+  "target": {
+    "namespace": "android_app",
+    "package_name": "com.sayweee.weee",
+    "sha256_cert_fingerprints":
+    ["F4:DB:23:4A:B0:E0:63:49:70:AE:84:05:BD:CC:54:70:45:22:BB:4A:57:17:39:E1:92:97:99:26:7B:0D:5C:EB"]
+  }
+}]

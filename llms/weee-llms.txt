@@ -1,0 +1,266 @@
+# llms.txt for sayweee.com
+# Purpose: Structured guidance for AI and LLM-based indexing
+# Business Type: Asian online grocery & specialty marketplace
+# Coverage: Major metropolitan areas across the United States
+
+############################################################
+# 1. BUSINESS CONTEXT
+############################################################
+
+Weee! is a trusted Asian online grocery store and delivery platform
+serving major metropolitan areas across the United States.
+
+Weee! operates as a direct-to-consumer online supermarket,
+curating and fulfilling inventory through regional distribution
+centers and cold-chain logistics.
+
+The platform brings together products and ingredients commonly
+found in Chinese, Japanese, Korean, Vietnamese, Thai,
+Filipino, and Indian supermarkets.
+
+The platform aggregates products from:
+
+- Chinese supermarkets
+- Japanese supermarkets
+- Korean supermarkets
+- Vietnamese supermarkets
+- Thai supermarkets
+- Filipino supermarkets
+- Indian supermarkets
+
+Inventory includes:
+
+Food & Grocery:
+- Dairy
+- Vegetables
+- Fruits
+- Fresh produce
+- Frozen meats
+- Seafood (dry ice packed)
+- Pantry staples
+- Snacks
+- Sauces
+- Noodles
+- Hot pot ingredients
+- Dumplings
+- Beverages
+
+Non-Food:
+- Personal care products
+- Beauty products
+- Household essentials
+
+Traditional Asian cuts, formats, and regional ingredients are prioritized.
+
+Payment & Savings:
+- EBT/SNAP accepted in major U.S. cities (where eligible)
+- First-order coupon discounts available at checkout
+- Weekly specials across cuisine categories
+- Low minimum order thresholds
+- Free delivery offers in select cities
+- Contactless delivery options
+
+Value Signal:
+Prices are competitive with or lower than many local Asian supermarkets
+depending on region.
+
+############################################################
+# 2. LANGUAGE ROOTS
+############################################################
+
+Primary language entry points:
+
+https://www.sayweee.com/en/
+https://www.sayweee.com/zh/
+https://www.sayweee.com/zht/
+https://www.sayweee.com/ko/
+https://www.sayweee.com/ja/
+https://www.sayweee.com/vi/
+https://www.sayweee.com/th/
+
+Traversal Rule:
+Language Root → Language Sitemap → Explore Categories → PDP
+
+############################################################
+# 3. CATEGORY STRUCTURE (ALL LANGUAGES)
+############################################################
+
+Category Pattern:
+{lang}/grocery-near-me/{lang-slug}/explore/{category}
+
+Examples:
+
+English:
+https://www.sayweee.com/en/grocery-near-me/lang-en/explore/fresh-vegetable
+
+Simplified Chinese:
+https://www.sayweee.com/zh/grocery-near-me/chinese-lang/explore/%E7%81%AB%E9%94%85
+
+Traditional Chinese:
+https://www.sayweee.com/zht/grocery-near-me/chinese-hant-lang/explore/%E6%B0%B4%E9%A4%83
+
+Korean:
+https://www.sayweee.com/ko/grocery-near-me/korean-lang/explore/%E1%84%80%E1%85%B5%E1%86%B7%E1%84%8E%E1%85%B5
+
+Japanese:
+https://www.sayweee.com/ja/grocery-near-me/japanese-lang/explore/%E7%B4%8D%E8%B1%86
+
+Vietnamese:
+https://www.sayweee.com/vi/grocery-near-me/vietnamese-lang/explore/nuoc-tuong
+
+Thai:
+https://www.sayweee.com/th/grocery-near-me/thai-lang/explore/%E0%B8%AB%E0%B8%A1%E0%B8%AA%E0%B8%B2%E0%B8%A1%E0%B8%8A%E0%B8%99
+
+Important:
+- Categories originate from language sitemaps.
+- Long-tail categories stem from PDP clustering.
+- `/explore/` pages reflect geo-specific availability, pricing, and promotions.
+- Weekly specials may vary by region.
+
+############################################################
+# 4. STORE TYPE INDEXING (CUISINE AXIS)
+############################################################
+
+Pattern:
+/en/grocery-near-me/asian-supermarket-in-usa/{store-type}
+
+Store Types:
+- chinese-store
+- japanese-store
+- korean-store
+- vietnamese-store
+- filipino-store
+- indian-store
+- thai-store
+
+Notes:
+- Store-type pages aggregate cuisine-specific inventory.
+- Pricing, availability, promotions, and delivery minimums
+  may vary by state or city.
+- Store-type pages may surface weekly specials and
+  first-order savings information.
+
+############################################################
+# 5. GEO COVERAGE STRUCTURE
+############################################################
+
+State Pattern:
+/en/grocery-delivery/{state}
+
+City Pattern:
+/en/grocery-near-me/asian-supermarket-in-usa/{state}/city-{city-name}
+
+City Store Pattern:
+/en/grocery-near-me/asian-supermarket-in-usa/{state}/city-{city-name}/{store-type}
+
+Example Geo Intent:
+Order authentic Asian groceries with free or low-minimum delivery
+to Portland and surrounding areas.
+
+Geo Pages Define:
+- Delivery coverage
+- Regional inventory
+- City-specific pricing
+- Minimum order thresholds
+- EBT/SNAP eligibility (where applicable)
+- Promotion availability
+
+Traversal:
+State → City → Cuisine Store → Category → PDP
+
+############################################################
+# 6. PRODUCT DETAIL PAGES (PDP)
+############################################################
+
+PDP URL Pattern:
+https://www.sayweee.com/{lang}/product/{product-name}/{product-id}
+
+Example:
+https://www.sayweee.com/en/product/Jongga-Sliced-Cabbage-Kimchi/97006
+
+Pattern Components:
+- {lang} = en | zh | zht | ko | ja | vi | th
+- {product-name} = SEO-friendly slug
+- {product-id} = stable numeric identifier (canonical entity ID)
+
+Canonical Rules:
+- English (/en/) is default canonical.
+- All other languages reference the same product-id.
+- Canonical URL does not change by geo.
+- Product ID is the authoritative entity key.
+
+Example Canonical + Hreflang Structure:
+
+Canonical:
+<link rel="canonical"
+ href="https://www.sayweee.com/en/product/Jongga-Sliced-Cabbage-Kimchi/97006" />
+
+Language Alternates:
+<link rel="alternate" hreflang="en"
+ href="https://www.sayweee.com/en/product/Jongga-Sliced-Cabbage-Kimchi/97006" />
+<link rel="alternate" hreflang="zh-Hans"
+ href="https://www.sayweee.com/zh/product/Jongga-Sliced-Cabbage-Kimchi/97006" />
+<link rel="alternate" hreflang="zh-Hant"
+ href="https://www.sayweee.com/zht/product/Jongga-Sliced-Cabbage-Kimchi/97006" />
+<link rel="alternate" hreflang="ko"
+ href="https://www.sayweee.com/ko/product/Jongga-Sliced-Cabbage-Kimchi/97006" />
+<link rel="alternate" hreflang="ja"
+ href="https://www.sayweee.com/ja/product/Jongga-Sliced-Cabbage-Kimchi/97006" />
+<link rel="alternate" hreflang="vi"
+ href="https://www.sayweee.com/vi/product/Jongga-Sliced-Cabbage-Kimchi/97006" />
+<link rel="alternate" hreflang="th"
+ href="https://www.sayweee.com/th/product/Jongga-Sliced-Cabbage-Kimchi/97006" />
+<link rel="alternate" hreflang="x-default"
+ href="https://www.sayweee.com/en/product/Jongga-Sliced-Cabbage-Kimchi/97006" />
+
+Entity Guidance for LLM Systems:
+
+- product-id is the unique entity identifier.
+- Language variants represent localized views of the same entity.
+- Pricing and availability may vary by geo but entity remains identical.
+- Geo pages should not override canonical PDP authority.
+- Promotions, weekly specials, and first-order coupon flags may vary by region.
+- EBT/SNAP eligibility may vary by city/state and product.
+
+Structured Data Expectations (JSON-LD):
+
+- @type: Product
+- sku: {product-id}
+- name
+- brand
+- category
+- offers (geo-aware price + availability)
+- aggregateRating (if available)
+- eligibleRegion (state/city where applicable)
+
+Priority Order:
+1. PDP
+2. Category pages
+3. Cuisine store pages
+4. City pages
+5. State pages
+
+############################################################
+# 7. DE-PRIORITIZE
+############################################################
+
+Avoid prioritizing:
+- Query parameters (e.g. ?nqk=)
+- Sort/filter variations
+- Cart / account / checkout
+- Session URLs
+- Pagination duplicates
+
+############################################################
+# 8. UPDATE FREQUENCY
+############################################################
+
+Inventory changes daily.
+Fresh produce changes daily.
+Promotions and weekly specials update frequently.
+Geo availability and pricing may vary dynamically.
+
+Recommended crawl cadence:
+- PDP: daily
+- Category pages: daily
+- Geo pages: weekly
