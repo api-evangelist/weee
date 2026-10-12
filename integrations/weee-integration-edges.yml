@@ -1,0 +1,16 @@
+generated: '2026-10-12'
+method: none
+source:
+- https://zapier.com/apps/weee/integrations
+- https://n8n.io/integrations/weee/
+- https://composio.dev/toolkits/weee
+- https://monid.ai/tools/weee
+checked:
+- https://composio.dev/toolkits/weee
+- https://monid.ai/tools/weee
+- https://n8n.io/integrations/weee/
+- https://zapier.com/apps/weee/integrations
+summary: null
+marketplace_apps: []
+edges: []
+templates: []
